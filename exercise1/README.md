@@ -58,14 +58,19 @@ You should receive output similar to the following response:
 
 Running this command will step you through setting up your project directory and Firebase products.
 
-    You will be asked to select the Firebase CLI features you want set up in this folder. Use the arrow keys and the spacebar to select Firestore and Hosting. Ensure your shell matches the following and then hit Enter:
+You will be asked to select the Firebase CLI features you want set up in this folder. Use the arrow keys and the spacebar to select Firestore and Hosting. Ensure your shell matches the following and then hit Enter:
 
-? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices.
+  ? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices.
 	 ◯ Database: Deploy Firebase Realtime Database Rules
+	 
 	 ◉ Firestore: Deploy rules and create indexes for Firestore
+	 
 	 ◯ Functions: Configure and deploy Cloud Functions
+	 
 	❯◉ Hosting: Configure and deploy Firebase Hosting sites
+	
 	 ◯ Storage: Deploy Cloud Storage security rules
+	 
 
 Choose the Firestore, Functions, Hosting options.
 
