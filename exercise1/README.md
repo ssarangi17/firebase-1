@@ -3,7 +3,7 @@
 
 In this and the next set of exercise, we will create a simple Appoinment making application using multi-page HTML for the UI and javascript for handling the event logic. The application will provide the following features :
 
-* It will use the Firebase authentication, to register new users and authenticate existing users. We will use only the email-password authentication provider in this.
+* **It will use the Firebase authentication, to register new users and authenticate existing users. We will use only the email-password authentication provider in this.**
 
 * It will have a customer.html page, in which the existing customer profile (email, name and phone) will be displayed. The user will add the details first time and can update them on subsequent logins.
 
@@ -26,13 +26,13 @@ In the first iteration, we will only create a skeleton application with the auth
 
 Steps to follow:
 1. Copy the following files from exercise1/public folder to <your-firebase-root>/public folder:
-    * index.html
-    * customer.html and customer.js
-    * appointments.html and appointments.js
-    * styles.js 
+    * _index.html_
+    * _customer.html_ and _customer.js_
+    * _appointments.html_ and _appointments.js_
+    * _styles.js_ 
 
 1. Deploy your firebase application:
 
-	firebase deploy
+	```firebase deploy```
 
 1. Copy the hosting URL (should resemble appname.web.app) and open it in a new tab and check the application flow.
