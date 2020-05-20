@@ -2,7 +2,7 @@
 
 Welcome to the firebase-1 wiki!
 
-![App with Firebase](https://cdn.qwiklabs.com/6pi71cGa4Nz1yhgU%2Biwp5cDD7Mv2JLuaIIHmW448Xiw%3D)
+![App with Firebase](https://github.com/ssarangi17/firebase-1/blob/master/Firebase.png)
 
 In this workshop we will go thru multiple exercises to create a Firebase project and a Simple App, and then enhance it to add a single feature at each step. We will build simple appointment scheduler application which will help the users to add their contact information and choose appointment slots.
 
