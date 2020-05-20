@@ -1,115 +1,38 @@
-# Setting up the Project and SDK
+
+# Description of the Application to be created in the exercises:
+
+In this and the next set of exercise, we will create a simple Appoinment making application using multi-page HTML for the UI and javascript for handling the event logic. The application will provide the following features :
+
+* It will use the Firebase authentication, to register new users and authenticate existing users. We will use only the email-password authentication provider in this.
+
+* It will have a customer.html page, in which the existing customer profile (email, name and phone) will be displayed. The user will add the details first time and can update them on subsequent logins.
+
+* From the customer.html page, the user can navigate to appointments.html page. Each appointment is a time value in "day date month hh:mm" format. The appointment  page will display the existing appointment times and also list a set of new appointments. The list of new appointments will be created using random values, aligning with hour boundaries.
+
+* A Cloud Function will also be added to get triggered on any changes in the customer profile data and send an email to the customer saying there has been a change in his profile data.
+
+* Later a Cloud Function will be added to be invoked as a REST api and send the list of appointments to the appointments page, replacing the local logic of generating the appointment list.
+
+# Exercise-1 : Create a Skeleton app without any data read or update logic
+
+In the first iteration, we will only create a skeleton application with the authentication working, links enabled, but no data reading or writing logic.
+
+1. The index.html will be our landing page. In this page, the firebase authentication configuration will be done, only for email-password provider. On successful authentication, firebase sdk will redirect to customer.html page.
+
+1. The customer.html will display the user.email as a label and also display two input fields to enter the Name and Phone. All the event handling and Firebase interaction logic will be in customer.js script file. In this exercise, the customer.cs file will not have any code, so the Save function will not work.
+
+1. The appointment link will take the user to the appointment.html page. In this exercise, the appointment.html page is empty and so is the javascript file.
 
 
-As a first step for this exercise, we will create and configure a Firebase project. We will deploy this template project and access it to get basic understanding of Firebase.
+Steps to follow:
+1. Copy the following files from exercise1/public folder to <your-firebase-root>/public folder:
+    * index.html
+    * customer.html and customer.js
+    * appointments.html and appointments.js
+    * styles.js 
 
-Let us do the following:
-
-0. Make sure that the firebase SDK is installed and you can execute the "firebase" commands.
-
-e.g. "firebase"
-
-1. Sign-in to the firebase.google.com
-
-2. Create a Firebase project in the Firebase Console. Choose USA as location, as we will be keeping all our artifacts in USA location. Don't select the Google Analytics for the timebeing.
-
-3. Do a walkthru of the Firebase console and the different features like Authentication, Database, Hosting, Functions etc
-
-4. Register your app. In this step, we create a new App and register it with Firebase. Choose the "Web" type app when creating.
-
-5. Now we will setup user authentication. 
-
-Return to the Firebase Console for this step.
-
-    Click on the Project Overview button in the left-hand navigation menu.
-
-    Under the "Develop" header, select Authentication and then click on the Sign-in tab:
-
-    From the list of Sign-in Providers, click on the pencil icon next to the Email/Passwd item.
-
-    For the "Project support email" select your Google account from the drop down list and click the enable toggle in the top right corner.
-
-    Once you have verified, click on the Save button.
-
-6. Next we will setup the database. 
-	In Firebase Console, Under the "Develop" header, select Database.
-	You will be prompted to choose a database type. Choose Firestore.
-	Select nam5 (United States) for your location and then click Create Database.  
-
-7. Now we will setup the firebase SDK to use your new project and app.
-
-a. In your laptop command prompt, run the following command to link your Google account with Firebase:
-
-      firebase login --no-localhost
-
-b. Enter in Y if asked if Firebase can collect error reporting information.
-
-c. Copy and paste the URL generated in a new browser tab and press Enter (directly clicking on the link sometimes may take to a different browser etc, than the one where you are logged-in)
-
-d. Login to your Google account and then click Allow. You will then be given an access code. Use that access code in the command prompt to link the SDK with the project.
-
-You should receive output similar to the following response:
-
-✔  Success! Logged in as xyz@gmail.com
-
-8. Now initialize a new Firebase project in your current working directory:
-
-	firebase init
-
-Running this command will step you through setting up your project directory and Firebase products.
-
-You will be asked to select the Firebase CLI features you want set up in this folder. Use the arrow keys and the spacebar to select Firestore and Hosting. Ensure your shell matches the following and then hit Enter:
-
-  ? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices.
-	 ◯ Database: Deploy Firebase Realtime Database Rules
-	 
-	 ◉ Firestore: Deploy rules and create indexes for Firestore
-	 
-	 ◯ Functions: Configure and deploy Cloud Functions
-	 
-	❯◉ Hosting: Configure and deploy Firebase Hosting sites
-	
-	 ◯ Storage: Deploy Cloud Storage security rules
-	 
-
-Choose the Firestore, Functions, Hosting options.
-
-    Then run through the rest of the steps to configure Firebase:
-
-    Key down to Use an existing project and press Enter.
-    Select your Firebase Project ID from the list then Enter.
-    Select "Y" for all the options or as appropriate.
- 
-You should receive the output similar to following:
-
-✔  Wrote public/404.html
-✔  Wrote public/index.html
-
-i  Writing configuration info to firebase.json...
-i  Writing project information to .firebaserc...
-i  Writing gitignore file to .gitignore...
-
-✔  Firebase initialization complete!
-
-The local configuration is now complete. 
-
-9. Now we will deploy the project and run it.
-
-Run the following command to deploy your firebase application:
+1. Deploy your firebase application:
 
 	firebase deploy
 
-You should receive the following output:
-
-✔  Deploy complete!
-
-Project Console: https://console.firebase.google.com/project/your-project/overview
-Hosting URL: https://appname.web.app
-
-    Copy the hosting URL (should resemble appname.web.app) and open it in a new tab. Now click on the Sign in with email:
-
-Congrats! You have deployed a Firebase web app.
-
-
-# Exercise-1 : Create a Skeleton app for setting Appointments
-
+1. Copy the hosting URL (should resemble appname.web.app) and open it in a new tab and check the application flow.
