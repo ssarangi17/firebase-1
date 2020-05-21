@@ -14,7 +14,7 @@ In this and the next set of exercise, we will create a simple Inventory Manageme
 * Later a Cloud Function will be added to be invoked as a REST api and send the list of items types to the inventory page, to use in the list of valid item types.
 
 # Data Model
-![ER Diagram(https://github.com/ssarangi17/firebase-1/blob/master/er-diagram.png)
+![ER Diagram](https://github.com/ssarangi17/firebase-1/blob/master/er-diagram.png)
 
 # Exercise-1 : Create a Skeleton app without any data read or update logic
 
