@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eAppointment - appointments</title>
+    <title>eInventory - Inventory List</title>
     <script src="/__/firebase/7.14.4/firebase-app.js"></script>
     <script src="/__/firebase/7.14.4/firebase-auth.js"></script>
     <script src="/__/firebase/7.14.4/firebase-firestore.js"></script>
@@ -12,25 +12,39 @@
   </head>
   <body>
     <div id="message">
-      <h2>Scheduled appointments</h2>
-      <div id="appointments"></div>
+      <h2>Current Inventory</h2>
+      <div id="inventory"></div>
       <hr/>
-      <h2>Schedule a new appointment</h2>
-      <select id="timeslots">
-        <option value="0">Choose time</option>
-      </select>
+      <h2>New Changes</h2>
+      <table>
+        <tr>
+          <td>Item Id</td>
+          <td><input id="itemId"></td>
+        </tr>
+        <tr>
+        <td>Item Name</td>
+          <td><input id="itemName"></td>
+        </tr>
+        <tr>
+          <td>Quantity</td>
+          <td><input id="itemQty"></td>
+        </tr>
+      </table>
       <br><br>
-      <button id="makeAppointment">Schedule</button>
+
+      <button id="create">Create</button>
+      <button id="update">Update</button>
+      <button id="delete">Delete</button>
     </div>
 
     <script type="text/javascript" language="javascript">  
         var versionUpdate = (new Date()).getTime();  
         var script = document.createElement("script");  
         script.type = "text/javascript";  
-        script.src = "appointments.js?v=" + versionUpdate;  
+        script.src = "inventory.js?v=" + versionUpdate;  
         document.body.appendChild(script);  
     </script>  
-<!--     <script src="appointments.js"></script>
+<!--     <script src="inventory.js"></script>
  -->
   </body>
 </html>
