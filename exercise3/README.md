@@ -29,7 +29,7 @@ Steps to follow:
 	
 1. Install dependencies locally by running: cd functions; npm install; cd -
 
-1. To be able to send emails with your Gmail account: enable access to Less Secure Apps and Display Unlock Captcha.
+1. To be able to send emails with your Gmail account: enable access to Less Secure Apps https://www.google.com/settings/security/lesssecureapps and Display Unlock Captcha  https://accounts.google.com/DisplayUnlockCaptcha.
 
 1. Set the gmail.email and gmail.password Google Cloud environment variables to match the email and password of the Gmail account used to send emails.
 
