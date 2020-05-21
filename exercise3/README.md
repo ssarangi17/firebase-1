@@ -25,6 +25,8 @@ In this iteration, we will create a Cloud Function and get it deployed.
    1. Add the sendEmailConfirmation function to send the email
 
 Steps to follow:
+1. Copy the package.json and index.js files to <your-firebase-root>/functions folder. 
+	
 1. Install dependencies locally by running: cd functions; npm install; cd -
 
 1. To be able to send emails with your Gmail account: enable access to Less Secure Apps and Display Unlock Captcha.
@@ -32,9 +34,6 @@ Steps to follow:
 1. Set the gmail.email and gmail.password Google Cloud environment variables to match the email and password of the Gmail account used to send emails.
 
    *firebase functions:config:set gmail.email="myusername@gmail.com" gmail.password="secretpassword"*
-
-
-1. Copy the package.json and index.js files to <your-firebase-root>/functions folder. 
 
 1. Deploy your firebase application:
 
